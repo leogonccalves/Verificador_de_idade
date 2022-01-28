@@ -12,41 +12,41 @@ function verificar() {
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
             if (fsex[0].checked){
-                genero = 'Homem'
+                genero = 'masculino'
                 if(idade >=0 && idade < 10 ){
                         //criança
-                        img.setAttribute('src', 'foto_criançaMenino.png')
+                        img.setAttribute('src', 'Foto_CriançaMenino.png')
                 } else if(idade <= 21) {
                         //Jovem
-                        img.setAttribute('src', 'foto_jovemMenino.png')
+                        img.setAttribute('src', 'Foto_JovemMenino.png')
                 }else if (idade < 50) {
                         //Adulto
-                        img.setAttribute('src', 'foto_homem.png')
+                        img.setAttribute('src', 'Foto_Homem.png')
                 }else {
                         //Idoso
-                        img.setAttribute('src', 'foto_idosoHomem.png')
+                        img.setAttribute('src', 'Foto_IdosoHomem.png')
                 }
             } else if (fsex[1].checked) {
-                genero = 'Mulher'
+                genero = 'feminino'
                 if(idade >=0 && idade < 10 ){
                     //criança
-                    img.setAttribute('src', 'foto_meninaCriança.png')
+                    img.setAttribute('src', 'Foto_MeninaCriança.png')
 
                 } else if(idade <= 21) {
                     //Jovem
-                    img.setAttribute('src', 'foto_jovemMenina.png')
+                    img.setAttribute('src', 'Foto_JovemMenina.png')
 
                 }else if (idade < 60) {
                     //Adulto
-                    img.setAttribute('src', 'foto_mulher.png')
+                    img.setAttribute('src', 'Foto_Mulher.png')
 
                 }else {
                     //Idoso
-                    img.setAttribute('src', 'foto_idosaMulher.png')
+                    img.setAttribute('src', 'Foto_IdosaMulher.png')
                 }
             }
-            res.style.textAling = 'center'
-            res.innerHTML = `<strong>Detectamos ${genero} com ${idade} anos.</strong>`
+            
+            res.innerHTML = `<strong>Detectamos pessoa do gênero ${genero} com ${idade} anos.</strong>`
             res.appendChild(img)
     }
 }
